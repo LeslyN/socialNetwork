@@ -5,45 +5,15 @@
   box-sizing: border-box;
 }
 
+/* clases generales */
 .row {
   margin-left: 0;
   margin-right: 0;
   margin-top: 30vh;
 }
 
-.btn-login, .btn-signup {
-  vertical-align: middle;
-  text-align: center center;
-}
-
-.btn-login {
-  margin-bottom: 1em;
-}
-
-.fa {
-  padding-right: 2em; 
-}
-
-.btn-face {
-  background-color: #00ff;
-  color: #fff;
-}
-
-.btn-google {
-  background-color: #fff;
-  border-color: #E7E7E7;
-}
-
-.btn-email {
-  background-color: #E7E7E7;
-}
-
 .vh100 {
   height: 100vh;
-}
-
-.grad50 {
-background: linear-gradient(#000000 25%, rgb(255, 168, 7));
 }
 
 .space-icon {
@@ -54,8 +24,13 @@ background: linear-gradient(#000000 25%, rgb(255, 168, 7));
   text-align: center;
 }
 
+.grad50 {
+background: linear-gradient(to bottom right, rgb(12, 221, 211) 25%, #202020);
+}
+
+/* VIEW INDEX */
 .logo {
-  color: #ea8519;;
+  color: #6516a5;;
   font-size: 50px;
   font-weight: 600;
 }
@@ -75,5 +50,45 @@ background: linear-gradient(#000000 25%, rgb(255, 168, 7));
 /*Color del icono de carga*/
 svg path, svg rect {
   fill: #FF6700;
+}
+
+/* VIEW - SESION */
+.btn-login {
+  vertical-align: middle;
+  text-align: center center;
+  margin-bottom: 1em;
+}
+
+
+/* botones */
+.btn-face {
+  background-color: #4267B2;
+  color: #fff;
+}
+
+.btn-google {
+  background-color: #fff;
+  border-color: #E7E7E7;
+}
+
+.btn-email {
+  background-color: #E7E7E7;
+}
+
+.link-a {
+  color: #000;
+}
+
+/* iconos dentro de los botones */
+.fa {
+  padding-right: 1em; 
+}
+
+
+
+
+
+
+
 
  
