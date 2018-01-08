@@ -26,18 +26,62 @@
               <a class="navbar-brand" href="#"></a>
           </div>
         </div>
-    
+        
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Logo <span class="sr-only">(current)</span></a></li>
+            <li><a href="#"><i class="fa fa-bell-o" aria-hidden="true"></i></a></li>
+          </ul>    
+          <form class="navbar-form navbar-left">
+            <div class="input-group">
+              <input type="text" class="form-control textinput clearable" placeholder="Search">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button">
+                  <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                </button>
+              </span>
+              </div>
+          </form>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Configuración</a></li>
-            <li><a href="#">Salir</a></li>
-            <li><a data-toggle="modal" data-target="#myModalRegister" href="#">inicia sesión</a></li>
+            <li>
+              <a href="#" class="" role="button" aria-haspopup="true">
+                <img class="profile-image" src="https://pbs.twimg.com/profile_images/950233850407542784/74kFeOyO_normal.jpg" alt="Perfil">
+              </a>
+            </li>
+            <li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i></a></li>
+            <li><a href="#">Logout</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
-  </header>
+  </header><!-- /header-->
+
+  <!-- Block - information -->
+  <div class="profile-information bg-profile">
+    <div class="row">
+      <div class="information">
+        <h3>User</h3>
+        <p class="user">@user</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="header-profile">
+      </div>
+    </div>
+    <div class="row">
+      <div class="contacts">
+        <div class="number">50</div>
+        <div class="title">Contacts</div>
+        <span>Amplía tu red</span>
+      </div>
+    </div>
+    <div class="row">
+      <span>Accede a información y herramaientas</span>
+      <g style="clip-path: url(#hg1)"></g>
+    </div>
+  </div>
 
    <!--Enlaces js-->
    <script src="../vendors/js/jquery-3.2.1.min.js"></script>

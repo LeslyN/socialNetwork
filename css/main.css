@@ -75,5 +75,9 @@ background: linear-gradient(#000000 25%, rgb(255, 168, 7));
 /*Color del icono de carga*/
 svg path, svg rect {
   fill: #FF6700;
+}
 
- 
+/* View Profile */
+.profile-image {
+  border-radius: 50%;
+}
