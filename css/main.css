@@ -20,14 +20,6 @@
   margin-bottom: 1em;
 }
 
-.space-icon {
-  padding-bottom: .5em;
-}
-
-.center {
-  text-align: center;
-}
-
 .fa {
   padding-right: 2em; 
 }
@@ -45,3 +37,43 @@
 .btn-email {
   background-color: #E7E7E7;
 }
+
+.vh100 {
+  height: 100vh;
+}
+
+.grad50 {
+background: linear-gradient(#000000 25%, rgb(255, 168, 7));
+}
+
+.space-icon {
+  padding-bottom: .5em;
+}
+
+.center {
+  text-align: center;
+}
+
+.logo {
+  color: #ea8519;;
+  font-size: 50px;
+  font-weight: 600;
+}
+
+/*icono de carga*/
+.loader {
+  margin: 0 0 2em;
+  height: 100px;
+  width: 20%;
+  text-align: center;
+  padding: 1em;
+  margin: 0 auto 1em;
+  display: inline-block;
+  vertical-align: top;
+}
+
+/*Color del icono de carga*/
+svg path, svg rect {
+  fill: #FF6700;
+
+ 
