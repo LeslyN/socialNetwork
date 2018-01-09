@@ -3,6 +3,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: Roboto, "Helvetica Neue", sans-serif
 }
 
 /* clases generales */
@@ -115,4 +116,81 @@ svg path, svg rect {
   position: absolute;
   top: 0;
   width: 50%;
+}
+
+/* Post */
+.safe {
+  stroke: #1da1f2;
+}
+
+.warn {
+  stroke: #ffad1f;
+}
+
+.danger {
+  stroke: #e0245e;
+}
+
+form {
+	padding: 25px 15px;
+}
+
+textarea {
+  border-color: 2 px solid #eee;
+  border-radius: 20px;
+	font-size: 16px;
+	min-height: 80px;
+	outline: none;
+	resize: none;
+	width: 100%;
+	transition: border-color 0.4s;
+  overflow: hidden;
+  padding: 1em;
+}
+
+textarea:focus {
+	border-color: #5ca2e7;
+}
+
+::-webkit-input-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder,
+:-moz-placeholder {
+	color: #fafafa;
+}
+
+.footer-form {
+	padding-top: 25px;
+} 
+
+.post-btn, .count {
+	font-weight: 700;
+}
+
+.post-btn {
+	background-color: #1da1f2;
+	border: 1px solid #35a9f1;
+	border-radius: 4px;
+	color: #ffffff;
+	font-family: Courier;
+	font-size: 16px;
+	text-transform: uppercase;
+	padding: 10px 25px;
+	transition: background-color 0.2s, color 0.2s;
+}
+
+.post-btn:disabled {
+	border: 1px solid #999999;
+	background-color: #cccccc;
+	color: #666666;
+} 
+
+.count {
+	float: right;
+	font-size: 18px;
+	line-height: 40px;
+}
+
+.items, .photo-selector, .icon-btn, .media-selector {
+  display: inline-block;
 }
