@@ -1,0 +1,50 @@
+<!-- Vista de inicio de sesión -->
+<!DOCTYPE html>
+<html lang="en">
+<!-- - - - - - - - - - - - - - - - - - - - - - CABEZA - - - - - - - - - - - - - - - - - - - - - - - - -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link rel="stylesheet" href="../vendors/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <title>Sesión</title>
+
+  
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCW8WTybFHHjgmKghBA-lmBiCoXyJEAGnM",
+            authDomain: "usuario-5f52b.firebaseapp.com",
+            databaseURL: "https://usuario-5f52b.firebaseio.com",
+            projectId: "usuario-5f52b",
+            storageBucket: "usuario-5f52b.appspot.com",
+            messagingSenderId: "345830470861"
+        };
+        firebase.initializeApp(config);
+    </script>
+</head>
+<!-- - - - - - - - - - - - - - - - - - - - - - CUERPO - - - - - - - - - - - - - - - - - - - - - - - - -->
+<body class="grad50 vh100">
+
+
+    <div class="container center">
+        <div class="row">
+            <div class="col-xs-12">
+                <input type="email" class="form-control vh5" placeholder="Email">
+                <input type="password" class="form-control vh5" placeholder="Password">
+                <button onclick="signIn" type="submit" class="btn btn-default">Crear</button>
+            </div>
+        </div>
+    </div>
+  
+
+  <!--Enlaces js-->
+  <script src="../vendors/js/jquery-3.2.1.min.js"></script>
+  <script src="../vendors/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../js/crear.js"></script>
+</body>
+</html>
