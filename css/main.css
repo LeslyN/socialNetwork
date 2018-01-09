@@ -16,6 +16,10 @@
   height: 100vh;
 }
 
+.vh5 {
+  margin-bottom: 5vh;
+}
+
 .space-icon {
   padding-bottom: .5em;
 }
@@ -26,6 +30,14 @@
 
 .grad50 {
 background: linear-gradient(to bottom right, rgb(12, 221, 211) 25%, #202020);
+}
+
+.black {
+  color: #000;
+}
+
+.white {
+  color: #fff;
 }
 
 /* VIEW INDEX */
