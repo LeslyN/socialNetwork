@@ -42,6 +42,15 @@ background: linear-gradient(to bottom right, rgb(140, 235, 152) 25%, #05ddec);
   color: #fff;
 }
 
+.tamaño-desktop {
+  margin-top: 0.8em;
+  width: 15%;
+}
+
+.padding {
+  padding-top: 1em;
+}
+
 /* VIEW INDEX */
 .logo {
   color: #6516a5;;
@@ -74,14 +83,14 @@ svg path, svg rect {
 }
 
 .logout {
+  margin-top: 1em;
   padding: 1em;
   background-color: #fff;
-  border-color: 1px solid #eee;
   border-radius: 10px;
 }
 
 .notification {
-  padding-top: 1em;
+  padding-top: 2em;
   padding-left: 1em;
 }
 
