@@ -73,6 +73,18 @@ svg path, svg rect {
   margin-bottom: 1em;
 }
 
+.logout {
+  padding: 1em;
+  background-color: #fff;
+  border-color: 1px solid #eee;
+  border-radius: 10px;
+}
+
+.notification {
+  padding-top: 1em;
+  padding-left: 1em;
+}
+
 /* botones */
 .btn-face {
   background-color: #4267B2;
@@ -126,6 +138,10 @@ svg path, svg rect {
   position: absolute;
   top: 0;
   width: 50%;
+}
+
+.contacts {
+  border-top: 1px solid #eee;
 }
 
 /* Post */
