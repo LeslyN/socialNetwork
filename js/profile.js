@@ -4,6 +4,9 @@ window.addEventListener('load', function() {
   var postBtn = document.getElementById('post-btn');
   var messages = document.getElementById('message');
   var countNumber = document.getElementById('count');
+  var file = document.getElementById('file');
+  // Referencia de las imágenes al nodo raíz
+  var storageRef = firebase.storage().ref();
   var MAXCHARACTERS = 140;
 
   publicationsArea.addEventListener('keyup', function(event) {
@@ -60,4 +63,13 @@ window.addEventListener('load', function() {
     postBtn.disabled = true;
     countNumber.textContent = MAXCHARACTERS;
   });
+
+  file.addEventListener('change', uploadImages, false);
+  function uploadImages() {
+    // alert('Subir imagen');
+
+    // Nombre de la imagen a subir
+    var imageUpload = file.files[0];
+    var uploadTask = storageRef.child('images-submit/' + imageUpload.name).put(imageUpload);
+  };
 });

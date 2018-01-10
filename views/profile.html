@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="../css/main.css">
   <title>Perfil</title>
-  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <!-- <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script> -->
 </head>
 <body>
   <header>
@@ -91,38 +91,22 @@
         <form>
           <textarea id="publications-area" placeholder="¿Qué estás pensando?" autofocus></textarea>
           <div class="row footer-form">
-            <div class="items">
-              <div class="photo-selector">
-                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                  <span class="cam img-responsive">
-                    <input accept="video/*,  video/x-m4v, video/webm, video/x-ms-wmv, video/x-msvideo, video/3gpp, video/flv, video/x-flv, video/mp4, video/quicktime, video/mpeg, video/ogv, .ts, .mkv, image/*" aria-label="Añadir fotos o video" type="file">
-                  </span>
-                  <!-- <button class="btn icon-btn" type="button" tabindex="-1" data-title="Añadir fotos o video" aria-hidden="true">
-                      <input class="img-responsive" type="file" name="image" src="../assets/icam.svg">
-                     <img class="cam" src="../assets/icam.svg" alt="cam" accept="image/gif,image/jpeg,image/jpg,image/png,video/mp4,video/quicktime,video/x-m4v" class="file-input" >
-                    <input name="media" accept="video/*,  video/x-m4v, video/webm, video/x-ms-wmv, video/x-msvideo, video/3gpp, video/flv, video/x-flv, video/mp4, video/quicktime, video/mpeg, video/ogv, .ts, .mkv, image/*" aria-label="Añadir fotos o video" type="file" method="post">
-                  </button> -->
-                </div>
-                <div class="image-selector col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                  <!-- <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"> -->
-                    <label class="media-selector">
-                      <!-- <input name="media-empty" accept="image/gif,image/jpeg,image/jpg,image/png,video/mp4,video/quicktime,video/x-m4v" class="file-input" data-title="Añadir fotos o video" data-delay="150" type="file"> -->
-                    </label>
-                  <!-- </div> -->
-                </div>
-              </div>
-            </div>
-            <input id="post-btn" class="post-btn" type="submit" value="postear" disabled>
-            <span id="count" class="count">140</span>
-          </div>
+            <label class="btn btn-file icon-btn col-xs-3 col-sm-3 col-md-3 col-lg-3">
+              <input class="hidden" id="file" name="camera" value="camera" type="file" accept="image/gif,image/jpeg,image/jpg,image/png,video/mp4,video/quicktime,video/x-m4v">
+              <img src="../assets/icam.svg" class="img-responsive" alt="upload image">
+            </label>
+            <input id="post-btn" class="post-btn col-xs-offset-1 col-xs-7 col-sm-offset-1 col-sm-6 col-md-offset-1 col-md-6 col-lg-offset-2 col-lg-6" type="submit" value="postear" disabled>
+            <span id="count" class="count col-xs-2 col-sm-3 col-md-3 col-lg-3">140</span>
+          </div>          
         </form>  
-        <!-- Messages -->
-        <div id="message" class="col-xs-12 col-sm-11 col-md-11 col-lg-11"></div>
       </div>
+      <!-- Messages -->
+      <div id="message" class="col-xs-offset-1 col-xs-10 col-sm-offset-5 col-sm-7 col-md-offset-5 col-md-7 col-lg-offset-5 col-lg-7"></div>
     </div>
   </section>
   
   <!--Enlaces js-->
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
   <script src="../vendors/js/jquery-3.2.1.min.js"></script>
   <script src="../vendors/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="../js/profile.js"></script>
