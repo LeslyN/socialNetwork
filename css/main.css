@@ -1,7 +1,5 @@
 /* Styles */
 * {
-  padding: 0;
-  margin: 0;
   box-sizing: border-box;
   font-family: Roboto, "Helvetica Neue", sans-serif
 }
@@ -33,7 +31,7 @@
 }
 
 .grad50 {
-background: linear-gradient(to bottom right, rgb(12, 221, 211) 25%, #202020);
+background: linear-gradient(to bottom right, rgb(140, 235, 152) 25%, #05ddec);
 }
 
 .black {
