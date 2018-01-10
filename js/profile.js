@@ -19,7 +19,7 @@ window.addEventListener('load', function() {
       } else if (countNumber >= 120 && countNumber <= 130) {
         countNumber.style.color = '#f5b40d';
       } else if (countNumber > 130 && countNumber <= 140) {
-        countNumber.style.color = 'red';
+        countNumber.style.color = '#F00';
       }
     } else {
       postBtn.disabled = true;

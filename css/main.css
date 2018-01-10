@@ -214,6 +214,7 @@ textarea:focus {
 .cam {
   width: 100%;
   height: 100%;
+  background-image: url(../assets/icam.svg);
 }
 
 /* #message {
@@ -223,11 +224,6 @@ textarea:focus {
 } */
 
 .new-message {
-  /* background-color: #f7f4f4;
-  border-radius: 5px;
-  margin: .8em auto;
-  padding: 1%;
-  word-wrap: break-word; */
   background-color: #fff;
   width: inherit;
   height: auto;
