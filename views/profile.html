@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="../css/main.css">
   <title>Perfil</title>
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
 </head>
 <body>
   <header>
@@ -51,7 +52,7 @@
               </a>
             </li>
             <!-- <li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i></a></li> -->
-            <li><a href="#">Logout</a></li>
+            <li><button onclick="cerrar()" class="btn btn-default" type="button">Log out</button></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
@@ -115,5 +116,6 @@
   <script src="../vendors/js/jquery-3.2.1.min.js"></script>
   <script src="../vendors/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="../js/profile.js"></script>
+  <script type="text/javascript" src="../js/login.js"></script>
 </body>
 </html>
