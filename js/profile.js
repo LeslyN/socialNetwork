@@ -5,8 +5,10 @@ window.addEventListener('load', function() {
   var messages = document.getElementById('message');
   var countNumber = document.getElementById('count');
   var file = document.getElementById('file');
-  // Referencia de las imágenes al nodo raíz
+  // Referencia(storage) de las imágenes al nodo raíz
   var storageRef = firebase.storage().ref();
+  // Accediendo al nodo Images de la DB en Firebase 
+  var imageFRef = firebase.database().ref().child('Images');
   var MAXCHARACTERS = 140;
 
   publicationsArea.addEventListener('keyup', function(event) {
@@ -67,9 +69,40 @@ window.addEventListener('load', function() {
   file.addEventListener('change', uploadImages, false);
   function uploadImages() {
     // alert('Subir imagen');
-
+    showImagesFB();
+    
     // Nombre de la imagen a subir
     var imageUpload = file.files[0];
     var uploadTask = storageRef.child('images-submit/' + imageUpload.name).put(imageUpload);
+
+    uploadTask.on('state_change', 
+      function(snapshot) {
+        // Muestra el progreso de subida de la imagen
+    
+      }, function(error) {
+      // Gestionar el error
+        alert('hubo error al subir la imagen');
+      }, function() {
+      // Subida de imagen exitosa
+        var downloadURL = uploadTask.snapshot.downloadURL;
+        // alert('Se ha subido exitosamente');
+        createNodeBDF(imageUpload.name, downloadURL);
+      });
   };
+
+  function showImagesFB() {
+    imageFRef.on('value', function(snapshot) {
+      var dataDBF = snapshot.val();
+      var result = '';
+      for (var key in dataDBF) {
+        result += '<img width="200" class="img-thumbnail" src="' + dataDBF[key].url + '"/>';
+      }
+      document.getElementById('message').innerHTML = result;
+    });
+  }
+
+  function createNodeBDF(nameImage, downloadURL) {
+    imageFRef.push({name: nameImage, 
+      url: downloadURL});
+  }
 });
