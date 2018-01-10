@@ -69,7 +69,14 @@ window.addEventListener('load', function() {
   file.addEventListener('change', uploadImages, false);
   function uploadImages() {
     // alert('Subir imagen');
-    showImagesFB();
+    imageFRef.on('value', function(snapshot) {
+      var dataDBF = snapshot.val();
+      var result = '';
+      for (var key in dataDBF) {
+        result += '<img width="200" class="img-thumbnail" src="' + dataDBF[key].url + '"/>';
+      }
+      document.getElementById('message').innerHTML = result;
+    });
     
     // Nombre de la imagen a subir
     var imageUpload = file.files[0];
@@ -90,16 +97,10 @@ window.addEventListener('load', function() {
       });
   };
 
-  function showImagesFB() {
-    imageFRef.on('value', function(snapshot) {
-      var dataDBF = snapshot.val();
-      var result = '';
-      for (var key in dataDBF) {
-        result += '<img width="200" class="img-thumbnail" src="' + dataDBF[key].url + '"/>';
-      }
-      document.getElementById('message').innerHTML = result;
-    });
-  }
+  // function showImagesFB() {
+    
+  //   });
+  // }
 
   function createNodeBDF(nameImage, downloadURL) {
     imageFRef.push({name: nameImage, 
