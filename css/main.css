@@ -82,16 +82,26 @@ svg path, svg rect {
   margin-bottom: 1em;
 }
 
-.logout {
+.logout, .login {
   margin-top: 1em;
   padding: 1em;
   background-color: #fff;
   border-radius: 10px;
+  font-weight: 700;
+}
+
+.login {
+  font-size: 20px;
+  background-color: #efbe43;
 }
 
 .notification {
   padding-top: 2em;
   padding-left: 1em;
+}
+
+.form-control {
+  font-size: 18px;
 }
 
 /* botones */
