@@ -15,21 +15,29 @@
 </head>
 <!-- - - - - - - - - - - - - - - - - - - - - - CUERPO - - - - - - - - - - - - - - - - - - - - - - - - -->
 <body class="grad50 vh100">
+  <!--boton que retrocede-->
+  <header>
+    <a class="btn btn-default" href="../views/sesion.html" role="button"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></a>
+  </header>
 
-
-    <div class="container center">
-        <div class="row">
-            <div class="col-xs-12">
-                <h4>Crea un nuevo correo:</h4>
-                <input id="email" type="email" class="form-control vh5" placeholder="Email">
-                <h4>Crea una contraseña:</h4>
-                <input id="password" type="password" class="form-control vh5" placeholder="Password">
-                <button onclick="crear()" type="submit" class="btn btn-warning">Crear</button>
-            </div>
+  <div class="container center">
+    <div class="row">
+      <div class="col-xs-12">
+        <h4>Crear correo:</h4>
+        <input id="email" type="email" class="form-control vh5" placeholder="Email">
+        <h4>Crear contraseña:
+          <br>
+          <h6>(6 caracteres como minimo)</h6>
+        </h4>
+        <input id="password" type="password" class="form-control vh5" placeholder="Password">
+        <button onclick="crear()" type="submit" class="btn btn-warning">Crear</button>
+        <br>
+        <div id="contenido">
         </div>
+      </div>
     </div>
+  </div>
   
-
   <!--Enlaces js-->
   <script src="../vendors/js/jquery-3.2.1.min.js"></script>
   <script src="../vendors/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
