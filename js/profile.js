@@ -1,9 +1,24 @@
 /* Posteo */ 
+// Initialize Firebase
+var config = {
+  apiKey: 'AIzaSyCW8WTybFHHjgmKghBA-lmBiCoXyJEAGnM',
+  authDomain: 'usuario-5f52b.firebaseapp.com',
+  databaseURL: 'https://usuario-5f52b.firebaseio.com',
+  projectId: 'usuario-5f52b',
+  storageBucket: 'usuario-5f52b.appspot.com',
+  messagingSenderId: '345830470861'
+};
+firebase.initializeApp(config);
 window.addEventListener('load', function() {
+  
+
   var publicationsArea = document.getElementById('publications-area');
   var postBtn = document.getElementById('post-btn');
   var messages = document.getElementById('message');
   var countNumber = document.getElementById('count');
+  var file = document.getElementById('file');
+  // Referencia de las imágenes al nodo raíz
+  var storageRef = firebase.storage().ref();
   var MAXCHARACTERS = 140;
 
   publicationsArea.addEventListener('keyup', function(event) {
@@ -59,5 +74,14 @@ window.addEventListener('load', function() {
     publicationsArea.focus();
     postBtn.disabled = true;
     countNumber.textContent = MAXCHARACTERS;
+  });
+
+  file.addEventListener('change', function(event) {
+    // alert('Subir imagen');
+    // Nombre de la imagen a subir
+    var imageUpload = file.files[0].name;
+    var uploadTask = storageRef.child('images-submit/' +imageUpload.name).put(imageUpload);
+
+    
   });
 });
