@@ -18,6 +18,7 @@ function crear() {
 
     .then(function() {
       verificar();
+      aparece();
     })
 
     .catch(function(error) {
@@ -32,16 +33,29 @@ function verificar() {
   }).catch(function(error) {
   });  
 }
+
+function aparece() {
+  var contenido = document.getElementById('contenido');
+  contenido.innerHTML = `
+  <br><p>Se envio un correo para validar tu cuenta</p><br>
+  <p>Clickea el boton para dirigirte a la vista principal</p>
+  <button class="btn btn-success"><a class="white" href="../views/sesion.html">PRINCIPAL</a></button>
+  `;
+}
   
 /* **********************************EMAIL***************************************** */
 function email() {
   var email1 = document.getElementById('email1').value;
   var password1 = document.getElementById('password1').value;
   
-  firebase.auth().signInWithEmailAndPassword(email1, password1).catch(function(error) {
-    var errorCode = error.code;
-    var errorMessage = error.message;
-  });
+  firebase.auth().signInWithEmailAndPassword(email1, password1)
+    .then(function() {
+      window.location.href = '../views/profile.html';
+    })
+    .catch(function(error) {
+      var errorCode = error.code;
+      var errorMessage = error.message;
+    });
 }
   
 function emailLook() {
@@ -49,7 +63,6 @@ function emailLook() {
     if (user) {
       /* El usuario a iniciado sesion */
       console.log('existe usuario activo');
-      /* entrar();*/
       var displayName = user.displayName;
       var email = user.email;
       var emailVerified = user.emailVerified;
@@ -69,13 +82,6 @@ emailLook();
 /* **********************************FACEBOOK*************************************** */
 
 /* PROFILE */
-/* function entrar() {
-  $(document).ready(function() {
-    setTimeout(function() { 
-      window.location.href = '../views/profile.html';
-    }, 4000);
-  });
-}*/
 function cerrar() {
   firebase.auth().signOut()
     .then(function() {
