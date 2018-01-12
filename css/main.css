@@ -185,13 +185,13 @@ input[type="password"]:focus {
 /* View Profile */
 .profile-image {
   border-radius: 50%;
-  border: 2px solid #fff;
 }
 
 /* Block information */
 .profile-content {
   border: 1px solid #eee;
 }
+
 .bg-profile {
   background-color: rgb(12, 221, 211);
   height: 15vh;
@@ -205,10 +205,8 @@ input[type="password"]:focus {
 }
 
 .photo {
-  margin-top: -2em;
   height: 100%;
   left: 0;
-  position: absolute;
   top: 0;
   width: 50%;
 }
@@ -216,6 +214,14 @@ input[type="password"]:focus {
 .contacts {
   border-top: 1px solid #eee;
 }
+
+.box-video {
+  display: block;
+  height: 400px;
+  /* position: absolute; */
+  width: 480px;
+}
+
 
 /* Post */
 .safe {
