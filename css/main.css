@@ -38,8 +38,15 @@ h4 {
   text-align: center;
 }
 
+/*
 .grad50 {
 background: linear-gradient(to bottom right, rgb(140, 235, 152) 25%, #05ddec);
+}*/
+.fondo {
+  background-image: url("../assets/images/fondo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 
 .black {
@@ -72,7 +79,7 @@ background: linear-gradient(to bottom right, rgb(140, 235, 152) 25%, #05ddec);
 
 .responsive-code, .small-code {
   font-family: 'Days one';
-  font-size: 48px;
+  font-size: 50px;
 }
 
 .responsive-code {
@@ -328,4 +335,7 @@ textarea:focus {
   border: 1px solid #e6ecf0;
   padding: 15px;
   margin: .6em auto;
+}
+.green {
+  color: rgb(83, 27, 212);
 }
