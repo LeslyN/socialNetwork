@@ -1,7 +1,8 @@
 /* Styles */
 * {
   box-sizing: border-box;
-  font-family: Roboto, "Helvetica Neue", sans-serif
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  outline: 1px solid red;
 }
 
 /* clases generales */
@@ -12,6 +13,9 @@
 
 .bg-session {
   margin-top: 30vh;
+}
+.bottom {
+  padding-bottom: 1em;
 }
 
 .vh100 {
@@ -81,9 +85,11 @@ svg path, svg rect {
   text-align: center center;
   margin-bottom: 1em;
 }
+.btn-principal {
+  width: 50%;
+}
 
 .logout, .login {
-  margin-top: 1em;
   padding: 1em;
   background-color: #fff;
   border-radius: 10px;
