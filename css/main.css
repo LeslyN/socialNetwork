@@ -5,6 +5,10 @@
 }
 
 /* clases generales */
+body {
+  background-color: paleturquoise;
+}
+
 .row {
   margin-left: 0;
   margin-right: 0;
@@ -183,6 +187,10 @@ input[type="password"]:focus {
 }
 
 /* View Profile */
+.navbar-collapse {
+  padding: 0;
+}
+
 .profile-image {
   border-radius: 50%;
 }
@@ -193,7 +201,7 @@ input[type="password"]:focus {
 }
 
 .bg-profile {
-  background-color: rgb(12, 221, 211);
+  /* background-color: rgb(12, 221, 211); */
   height: 15vh;
   width: 100%;
 }
@@ -218,7 +226,6 @@ input[type="password"]:focus {
 .box-video {
   display: block;
   height: 400px;
-  /* position: absolute; */
   width: 480px;
 }
 
