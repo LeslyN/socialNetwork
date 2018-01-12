@@ -226,6 +226,10 @@ input[type="password"]:focus {
 .box-video {
   display: block;
   height: 400px;
+<<<<<<< HEAD
+=======
+  /* position: absolute; */
+>>>>>>> 5cfc913fdf79200f48bdab4bab1e4d22e99a97cd
   width: 480px;
 }
 
