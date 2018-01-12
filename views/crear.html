@@ -23,23 +23,20 @@
   <div class="container center">
     <div class="row">
       <div class="col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-2 col-md-8 col-lg-offset-2 col-lg-8">
-        <h4>Crear correo:</h4>
+        <h3>Ingresa correo existente:</h3>
+        <h5>(este correo será verificado enviandote un e-mail para confirmación)</h5>
         <input id="email" type="email" class="form-control vh5" placeholder="Email">
-        <h4>Crear contraseña:
-          <br>
-          <h6>(6 caracteres como minimo)</h6>
-        </h4>
+        <h3>Crear contraseña:</h3>
+        <h5>(6 caracteres como minimo)</h5>
         <input id="password" type="password" class="form-control vh5" placeholder="Password">
-        <div class="col-xs-12 col-sm-offset-2 col-sm-9 col-md-offset-2 col-md-9 col-lg-offset-2 col-lg-9">
-          <button onclick="crear()" type="submit" class="btn btn-warning btn-lg btn-block login">Crear</button>
+        <div class="col-xs-12 col-sm-offset-1 col-sm-9 col-md-offset-1 col-md-9 col-lg-offset-1 col-lg-9 bottom">
+          <button onclick="crear()" type="submit" class="btn btn-warning btn-lg btn-block">Crear</button>
         </div>
-        <br>
-        <div id="contenido">
-        </div>
+        <div id="contenido"></div>
       </div>
     </div>
   </div>
-  
+
   <!--Enlaces js-->
   <script src="../vendors/js/jquery-3.2.1.min.js"></script>
   <script src="../vendors/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
