@@ -12,6 +12,9 @@
   <link rel="shortcut icon" type="image/x-icon" href="../assets/images/favicon/apple-icon-76x76.png">
   <link rel="stylesheet" href="../css/main.css">
   <title>Sesión</title>
+  <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+
 </head>
 <!-- - - - - - - - - - - - - - - - - - - - - - CUERPO - - - - - - - - - - - - - - - - - - - - - - - - -->
 <body class="grad50 vh100 opaque">
@@ -28,7 +31,7 @@
       <div class="col-xs-12 col-sm-push-2 col-sm-8 col-md-8 col-lg-8">
         <button class="btn btn-login btn-lg btn-block btn-face" type="submit"><a class="white"  href="../views/facebook.html"><i class="fa fa-facebook" aria-hidden="true"></i> Login with Facebook</a></button>
         <button class="btn btn-login btn-lg btn-block btn-google" type="submit"><a class="black"  href="../views/google.html"><i class="fa fa-google" aria-hidden="true"></i> Login with Google</a></button>
-        <button class="btn btn-login btn-lg btn-block btn-email" type="submit"><a class="black" href="../views/email.html"><i class="fa fa-envelope-o" aria-hidden="true"></i> Login with Email</a></button>
+        <button class="btn btn-login btn-lg btn-block btn-email" type="submit"><a class="black" href="../views/email.html"><i class="fa fa-envelope-o" aria-hidden="true"></i> Login with Email</a></button>       
       </div>
     </div>
     <!--Crear nuevo usuario-->
@@ -37,12 +40,12 @@
         <a class="link-a" href="../views/crear.html">No account? Create one here</a>
       </div>
     </div>
-      
   </section>
 
   <!--Enlaces js-->
   <script src="../vendors/js/jquery-3.2.1.min.js"></script>
   <script src="../vendors/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="   "></script>
+  <script type="text/javascript" src="../js/login-red-social.js"></script>
+
 </body>
 </html>

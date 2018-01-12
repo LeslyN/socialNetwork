@@ -1,4 +1,4 @@
-/* Firebase */
+/* ******************************Firebase************************************* */
 var config = {
   apiKey: 'AIzaSyCW8WTybFHHjgmKghBA-lmBiCoXyJEAGnM',
   authDomain: 'usuario-5f52b.firebaseapp.com',
@@ -11,9 +11,10 @@ firebase.initializeApp(config);
 
 /* *******************************CREAR***************************************** */
 function crear() {
+  /* almancena en una variable el email y password */
   var email = document.getElementById('email').value;
   var password = document.getElementById('password').value;
-  
+  /* Autentificacion de la cuenta */
   firebase.auth().createUserWithEmailAndPassword(email, password)
 
     .then(function() {
@@ -26,7 +27,7 @@ function crear() {
       var errorMessage = error.message;
     });
 }
-
+/* Envia un correo para verificar que la cuenta existe */
 function verificar() {
   var user = firebase.auth().currentUser;
   user.sendEmailVerification().then(function() {
@@ -38,9 +39,9 @@ function verificar() {
 function aparece() {
   var contenido = document.getElementById('contenido');
   contenido.innerHTML = `
-  <br><p>Se envio un correo para validar tu cuenta</p><br>
-  <p>Clickea el boton para dirigirte a la vista principal</p>
-  <button class="btn btn-success"><a class="white" href="../views/sesion.html">PRINCIPAL</a></button>
+    <h4>Se envio un correo para validar tu cuenta</h4>
+    <h4>Clickea el boton para dirigirte a la vista principal</h4>
+  <button class="btn btn-success btn-lg btn-principal"><a class="white" href="../views/sesion.html">PRINCIPAL</a></button>
   `;
 }
   
@@ -78,11 +79,8 @@ function emailLook() {
 }
 emailLook();
 
-  
-/* **********************************GOOGLE***************************************** */
-/* **********************************FACEBOOK*************************************** */
-
-/* PROFILE */
+/* ***********************************PROFILE*************************************** */
+/* Cerrar sesion */
 function cerrar() {
   firebase.auth().signOut()
     .then(function() {
