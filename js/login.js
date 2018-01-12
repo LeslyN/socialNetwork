@@ -31,6 +31,7 @@ function verificar() {
   var user = firebase.auth().currentUser;
   user.sendEmailVerification().then(function() {
   }).catch(function(error) {
+    email.css({'border': '1px solid red'});
   });  
 }
 
