@@ -21,7 +21,8 @@ function google() {
       var token = result.credential.accessToken;
       // The signed-in user info.
       var user = result.user;
-      console.log(user);
+      console.log('usuario activo');
+      window.location.href = '../views/sesion.html';
     // ...
     })
     .catch(function(error) {
