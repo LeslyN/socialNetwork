@@ -22,7 +22,7 @@ function google() {
       // The signed-in user info.
       var user = result.user;
       console.log('usuario activo');
-      window.location.href = '../views/sesion.html';
+      window.location.href = '../views/profile.html';
     // ...
     })
     .catch(function(error) {
