@@ -8,31 +8,34 @@ var config = {
   messagingSenderId: '345830470861'
 };
 firebase.initializeApp(config);
+
   
 /* ******************************FACEBOOK**************************** */
-var user = null;
 var provider = new firebase.auth.FacebookAuthProvider();
   
 function facebook() {
-  firebase.auth().signInWithPopup(provider)
+  firebase.auth().signInWithRedirect(provider);
 
-    .then(function(result) {
-      /* Esto le da un token de acceso de Facebook. Puede usarlo para acceder a la API de Facebook.*/
+  firebase.auth().getRedirectResult().then(function(result) {
+    if (result.credential) {
+      // This gives you a Facebook Access Token. You can use it to access the Facebook API.
       var token = result.credential.accessToken;
-      /* Informacion del usuario registrado */
-      var user = result.user;
-      console.log('usuario activo');
-      /* Direcciona a la vista profile */
-      window.location.href = '../views/profile.html';
-    })
-    .catch(function(error) {
-      /* Manejo de errores */
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      /* El correo electrónico de la cuenta del usuario ya esta siendo utilizada. */
-      var email = error.email;
-      /* El tipo firebase.auth.AuthCredential que se utilizó. */
-      var credential = error.credential;
-    });
+      // ...
+    }
+    // The signed-in user info.
+    var user = result.user;
+    console.log('usuario activo');
+    /* Direcciona a la vista profile */
+    window.location.href = '../views/profile.html';
+  }).catch(function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // The email of the user's account used.
+    var email = error.email;
+    // The firebase.auth.AuthCredential type that was used.
+    var credential = error.credential;
+    // ...
+  });
 }
 
