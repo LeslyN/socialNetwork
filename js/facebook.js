@@ -10,7 +10,7 @@ var config = {
 firebase.initializeApp(config);
   
 /* ******************************FACEBOOK**************************** */
-var user = null;
+var user = null; 
 var provider = new firebase.auth.FacebookAuthProvider();
   
 function facebook() {
