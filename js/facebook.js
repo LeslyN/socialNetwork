@@ -1,4 +1,4 @@
-/* Firebase */
+// Initialize Firebase
 var config = {
   apiKey: 'AIzaSyCW8WTybFHHjgmKghBA-lmBiCoXyJEAGnM',
   authDomain: 'usuario-5f52b.firebaseapp.com',
@@ -8,13 +8,12 @@ var config = {
   messagingSenderId: '345830470861'
 };
 firebase.initializeApp(config);
-
-/* *************************FACEBOOK******************************** */
+  
+/* ******************************FACEBOOK**************************** */
 var user = null;
-
-$('.facebook').on('click', function(event) {
-  var provider = new firebase.auth.FacebookAuthProvider();
-
+var provider = new firebase.auth.FacebookAuthProvider();
+  
+function facebook() {
   firebase.auth().signInWithPopup(provider)
 
     .then(function(result) {
@@ -35,5 +34,5 @@ $('.facebook').on('click', function(event) {
       /* El tipo firebase.auth.AuthCredential que se utilizó. */
       var credential = error.credential;
     });
-});
+}
 

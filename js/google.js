@@ -1,4 +1,4 @@
-/* Firebase */
+// Initialize Firebase
 var config = {
   apiKey: 'AIzaSyCW8WTybFHHjgmKghBA-lmBiCoXyJEAGnM',
   authDomain: 'usuario-5f52b.firebaseapp.com',
@@ -10,11 +10,10 @@ var config = {
 firebase.initializeApp(config);
 
 /* ******************************GOOGLE**************************** */
-$('.google').on('click', function(event) {
-  var provider = new firebase.auth.GoogleAuthProvider();
+var provider = new firebase.auth.GoogleAuthProvider();
 
+function google() {
   firebase.auth().signInWithPopup(provider)
-
     .then(function(result) {
       /* Esto le da un token de acceso de Google. Puede usarlo para acceder a la API de Google.*/
       var token = result.credential.accessToken;
@@ -33,4 +32,4 @@ $('.google').on('click', function(event) {
       /* El tipo firebase.auth.AuthCredential que se utilizó. */
       var credential = error.credential;
     });
-});
+}
