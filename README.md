@@ -14,18 +14,27 @@
 ## Organizacion:
 
 #### Imagenes del planteamiento de la web
-![plan1](assets/images/1.jpeg)
-![plan2](assets/images/2.jpeg)
+* iniciar sesion
+![plan1](assets/images/readme/3.png)
+* perfil de usuario
+![plan2](assets/images/readme/1.png)
+* preferencias
+![plan3](assets/images/readme/4.png)
+* amigos
+![plan4](assets/images/readme/2.png)
 #### Mobile
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
+![m-index](assets/images/readme/mobile/index.png)
+![m-inicia-sesion](assets/images/readme/mobile/inicia-sesion.png)
+![m-crear](assets/images/readme/mobile/crear.png)
+![m-perfil](assets/images/readme/mobile/perfil.png)
+![m-preferencias](assets/images/readme/mobile/preferencias.png)
+![m-amigos](assets/images/readme/mobile/amigos.png)
 #### Desktop
-![]()
-![]()
-![]()
-![]()
-![]()
+![d-index](assets/images/readme/desktop/index.png)
+![d-inicia-sesion](assets/images/readme/desktop/inicia-sesion.png)
+![d-crear](assets/images/readme/desktop/crear.png)
+![d-facebook](assets/images/readme/desktop/facebook.png)
+![d-google](assets/images/readme/desktop/google.png)
+![d-perfil](assets/images/readme/desktop/perfil.png)
+![d-preferencias](assets/images/readme/desktop/preferencias.png)
+![d-amigos](assets/images/readme/desktop/amigos.png)
