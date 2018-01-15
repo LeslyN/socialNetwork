@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Days+One" rel="stylesheet">
@@ -11,35 +11,66 @@
   <link rel="shortcut icon" type="image/x-icon" href="../assets/images/favicon/apple-icon-76x76.png">
   <link rel="stylesheet" href="../css/main.css">
   <title>Profile</title>
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
 </head>
 <body class="bg-profile">
   <div id="perfil">
     <!-- Header perfil -->
-    <div class="header">
-      <button class="btn-image">
-        <div class="text">ALTERAR FUNDO</div>
-        <i class="fa fa-picture-o" aria-hidden="true"></i>
-      </button>
-    </div>
+    <div class="header"></div>
   
     <!-- Avatar -->
     <div class="avatar"></div>
 
-    <nav class="menu">
-      <ul>
-        <li><a class="home">Preferencias</a></li>
-        <li><a class="opcion1">Cotactos</a></li>
-      </ul>
-    </nav>
-
-    <!-- Título de Perfil -->
-    <div class="title-profile">
-      <h1>Carmen Farro Lopez</h1>
-    </div>
+    <div class="container top">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 center">
+          <div class="card">
+            <div class="card-header">
+              <ul class="nav nav-tabs card-header-tabs" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link home active" data-toggle="tab" href="preferences.html" role="tab">Preferencias</a>
+                </li>
+                <li class="nav-item">
+                  <li><a class="nav-link contact" data-toggle="tab" href="contacts.html" role="tab">Contactos</a></li>
+                </li>
+                <li class="nav-item">
+                  <li><a class="nav-link preferences" data-toggle="tab" href="singoff.html" role="tab">Salir</a></li>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <br>
+        </div>
+      </div>
+      
+      <!-- Título de Perfil -->
+      <div class="title-profile">
+          <h1>Carmen Farro Lopez</h1>
+      </div>
+      <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-1 col-md-10 col-lg-offset-1 col-lg-10">
+          <form>
+            <textarea id="publications-area" placeholder="¿Qué estás pensando?" autofocus></textarea>
+            <div class="row footer-form">
+              <label class="btn btn-file icon-btn col-xs-offset-1 col-xs-2 col-sm-1 col-md-1 col-lg-1">
+                <input class="hidden" id="file" name="camera" value="camera" type="file" accept="image/gif,image/jpeg,image/jpg,image/png,video/mp4,video/quicktime,video/x-m4v">
+                <img src="../assets/icam.svg" class="img-responsive" alt="upload image">
+              </label>
+              <!-- <div class="col-xs-5"><a href="#" class="like"><i class="fa fa-thumbs-up" aria-hidden="true"></i> Me Gusta <small class="text-muted">12</small></a></div> -->
+              <input id="post-btn" class="post-btn col-xs-offset-1 col-xs-5 col-sm-offset-3 col-sm-5 col-md-offset-3 col-md-5 col-lg-offset-3 col-lg-5" type="submit" value="postear" disabled>
+              <span id="count" class="count col-xs-pull-1 col-xs-1 col-sm-1 col-md-1 col-lg-1">140</span>
+            </div>          
+          </form>  
+        </div>
+        <!-- Messages -->
+        <div id="message" class="col-xs-offset-1 col-xs-10 col-sm-offset-5 col-sm-7 col-md-offset-5 col-md-7 col-lg-offset-5 col-lg-7"></div>
+        <!-- Notificaciones  -->
+        <div class="row">
+    </div>         
   </div>
+
   <!--Enlaces js-->
   <script src="../vendors/js/jquery-3.2.1.min.js"></script>
   <script src="../vendors/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src=""></script>
+  <script type="text/javascript" src="../js/profile.js"></script>
 </body>
 </html>
