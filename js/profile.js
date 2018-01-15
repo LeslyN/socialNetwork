@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* Posteo */ 
 window.addEventListener('load', function() {
   var publicationsArea = document.getElementById('publications-area');
@@ -107,7 +106,7 @@ window.addEventListener('load', function() {
       url: downloadURL});
   }
 });
-=======
+
 function fileUpload() {
   function Init() {
     var fileSelect = document.getElementById('file-upload');
@@ -126,13 +125,13 @@ function fileUpload() {
     }
   }
   
-  function fileDragHover(e) {
+  function fileDragHover(event) {
     var fileDrag = document.getElementById('file-drag');
   
-    e.stopPropagation();
-    e.preventDefault();
+    event.stopPropagation();
+    event.preventDefault();
   
-    fileDrag.className = (e.type === 'dragover' ? 'hover' : 'modal-body file-upload');
+    fileDrag.className = (event.type === 'dragover' ? 'hover' : 'modal-body file-upload');
   }
   
   function fileSelectHandler(e) {
@@ -195,4 +194,3 @@ function fileUpload() {
   }
 }
 fileUpload();
->>>>>>> 273a43663752bd4ed65623f4f5e2f6a1ea0c34df
