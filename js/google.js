@@ -1,4 +1,4 @@
-// Initialize Firebase
+//* ----------------------FIREBASE-------------------------- */
 var config = {
   apiKey: 'AIzaSyCW8WTybFHHjgmKghBA-lmBiCoXyJEAGnM',
   authDomain: 'usuario-5f52b.firebaseapp.com',
@@ -9,27 +9,38 @@ var config = {
 };
 firebase.initializeApp(config);
 
-/* ******************************GOOGLE**************************** */
-var provider = new firebase.auth.GoogleAuthProvider();
+/* VINCULACION DE DATOS */
+/* cuando un usuario accedio correctamente, se puede obtener informacion de el */
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    /* El usuario a iniciado sesion */
+    console.log('existe usuario activo');
+    var displayName = user.displayName;
+    var email = user.email;
+    var emailVerified = user.emailVerified;
+    var photoURL = user.photoURL;
+    var isAnonymous = user.isAnonymous;
+    var uid = user.uid;
+    var providerData = user.providerData;
+    $(location).attr('href', '../views/profile.html');
+  } else {
+    console.log('no existe usuario activo');
+  }
+});
 
-function google() {
+/* GOOGLE */
+var user = null;
+$('#log-google').on('click', function(event) {
+  var provider = new firebase.auth.GoogleAuthProvider();
+  
   firebase.auth().signInWithPopup(provider)
     .then(function(result) {
-      /* Esto le da un token de acceso de Google. Puede usarlo para acceder a la API de Google.*/
       var token = result.credential.accessToken;
-      /* Informacion del usuario registrado */
       var user = result.user;
-      console.log('usuario activo');
-      /* Direcciona a la vista profile */
-      window.location.href = '../views/profile.html';
-    })
-    .catch(function(error) {
-      /* Manejo de errores */
+    }).catch(function(error) {
       var errorCode = error.code;
       var errorMessage = error.message;
-      /* El correo electrónico de la cuenta del usuario ya esta siendo utilizada. */
       var email = error.email;
-      /* El tipo firebase.auth.AuthCredential que se utilizó. */
       var credential = error.credential;
     });
-}
+});
