@@ -115,7 +115,7 @@ $('#log-google').on('click', function(event) {
 $('#logOut').on('click', function(event) {
   firebase.auth().signOut()
     .then(function() {
-      window.location.href = '../views/sesion.html';
+      window.location.href = '../views/session.html';
     })
     .catch(function(error) {
       console.log(error);

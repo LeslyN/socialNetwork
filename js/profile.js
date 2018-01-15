@@ -194,3 +194,7 @@ function fileUpload() {
   }
 }
 fileUpload();
+
+function preferences() {
+  window.location.href = '../views/preferences.html';
+}
