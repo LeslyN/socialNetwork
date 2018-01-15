@@ -77,7 +77,7 @@ firebase.auth().onAuthStateChanged(function(user) {
   }
 });
 
-/* FACEBOOK */
+/* FACEBOOK 
 var user = null;
 
 $('#log-facebook').on('click', function(event) {
@@ -94,8 +94,8 @@ $('#log-facebook').on('click', function(event) {
       var email = error.email;
       var credential = error.credential;
     });
-});
-/* GOOGLE */
+}); */
+/* GOOGLE 
 $('#log-google').on('click', function(event) {
   var provider = new firebase.auth.GoogleAuthProvider();
   
@@ -110,7 +110,7 @@ $('#log-google').on('click', function(event) {
       var credential = error.credential;
     });
 });
-
+*/
 /* cerrar sesion */
 $('#logOut').on('click', function(event) {
   firebase.auth().signOut()

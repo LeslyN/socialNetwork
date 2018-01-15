@@ -1,4 +1,4 @@
-// Initialize Firebase
+/* ----------------------FIREBASE-------------------------- */
 var config = {
   apiKey: 'AIzaSyCW8WTybFHHjgmKghBA-lmBiCoXyJEAGnM',
   authDomain: 'usuario-5f52b.firebaseapp.com',
@@ -9,27 +9,40 @@ var config = {
 };
 firebase.initializeApp(config);
 
-  
-/* ******************************FACEBOOK**************************** */
-var user = null;
-var provider = new firebase.auth.FacebookAuthProvider();
-  
-function facebook() {
-  firebase.auth().signInWithPopup(provider).then(function(result) {
-    // This gives you a Facebook Access Token. You can use it to access the Facebook API.
-    var token = result.credential.accessToken;
-    // The signed-in user info.
-    var user = result.user;
-    // ...
-  }).catch(function(error) {
-    // Handle Errors here.
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    // The email of the user's account used.
-    var email = error.email;
-    // The firebase.auth.AuthCredential type that was used.
-    var credential = error.credential;
-    // ...
-  });
-}
+/* VINCULACION DE DATOS */
+/* cuando un usuario accedio correctamente, se puede obtener informacion de el */
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    /* El usuario a iniciado sesion */
+    console.log('existe usuario activo');
+    var displayName = user.displayName;
+    var email = user.email;
+    var emailVerified = user.emailVerified;
+    var photoURL = user.photoURL;
+    var isAnonymous = user.isAnonymous;
+    var uid = user.uid;
+    var providerData = user.providerData;
+    $(location).attr('href', '../views/profile.html');
+  } else {
+    console.log('no existe usuario activo');
+  }
+});
 
+/* FACEBOOK */
+var user = null;
+
+$('#log-facebook').on('click', function(event) {
+  var provider = new firebase.auth.FacebookAuthProvider();
+
+  firebase.auth().signInWithPopup(provider)
+    .then(function(result) {
+      var token = result.credential.accessToken;
+      var user = result.user;
+    })
+    .catch(function(error) {
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      var email = error.email;
+      var credential = error.credential;
+    });
+});
