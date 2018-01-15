@@ -10,10 +10,10 @@ var config = {
 firebase.initializeApp(config);
 
 /* CREAR CUENTA */
-function create() {
+$('#signUp').on('click', function(event) {
   /* almancena en una variable el email y password */
-  var email = document.getElementById('email').value;
-  var password = document.getElementById('password').value;
+  var email = $('#email').val();
+  var password = $('#password').val();
   /* registrar nuevos usuarios */
   firebase.auth().createUserWithEmailAndPassword(email, password)
     .then(function() {
@@ -24,7 +24,8 @@ function create() {
       var errorCode = error.code;
       var errorMessage = error.message;
     });
-}
+});
+
 
 function checkEmail() {
   var user = firebase.auth().currentUser;
@@ -41,43 +42,77 @@ function appears() {
     <button class="btn-login" type="button"><a href="../views/session.html"></a></button>
   `;
 }
+
 /* INGRESO CON EL EMAIL CREADO */
-function email() {
-  var email1 = document.getElementById('email1').value;
-  var password1 = document.getElementById('password1').value;
-  
-  firebase.auth().signInWithEmailAndPassword(email1, password1)
-    .then(function() {
-      window.location.href = '../views/profile.html';
-    })
+$('#logIn').on('click', function(event) {
+  var logEmail = $('#logEmail').val();
+  var LogPassword = $('#LogPassword').val();
+
+  firebase.auth().signInWithEmailAndPassword(logEmail, logPassword)
+  /* .then(function() {
+    window.location.href = '../views/profile.html';
+  }) */ 
     .catch(function(error) {
       var errorCode = error.code;
       var errorMessage = error.message;
     });
-}
+});
+
 /* VINCULACION DE DATOS */
 /* cuando un usuario accedio correctamente, se puede obtener informacion de el */
-function emailLook() {
-  firebase.auth().onAuthStateChanged(function(user) {
-    if (user) {
-      /* El usuario a iniciado sesion */
-      console.log('existe usuario activo');
-      var displayName = user.displayName;
-      var email = user.email;
-      var emailVerified = user.emailVerified;
-      var photoURL = user.photoURL;
-      var isAnonymous = user.isAnonymous;
-      var uid = user.uid;
-      var providerData = user.providerData;
-    } else {
-      console.log('no existe usuario activo');
-    }
-  });
-}
-emailLook();
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    /* El usuario a iniciado sesion */
+    console.log('existe usuario activo');
+    var displayName = user.displayName;
+    var email = user.email;
+    var emailVerified = user.emailVerified;
+    var photoURL = user.photoURL;
+    var isAnonymous = user.isAnonymous;
+    var uid = user.uid;
+    var providerData = user.providerData;
+    $(location).attr('href', '../views/profile.html');
+  } else {
+    console.log('no existe usuario activo');
+  }
+});
+
+/* FACEBOOK */
+var user = null;
+
+$('#log-facebook').on('click', function(event) {
+  var provider = new firebase.auth.FacebookAuthProvider();
+
+  firebase.auth().signInWithPopup(provider)
+    .then(function(result) {
+      var token = result.credential.accessToken;
+      var user = result.user;
+    })
+    .catch(function(error) {
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      var email = error.email;
+      var credential = error.credential;
+    });
+});
+/* GOOGLE */
+$('#log-google').on('click', function(event) {
+  var provider = new firebase.auth.GoogleAuthProvider();
+  
+  firebase.auth().signInWithPopup(provider)
+    .then(function(result) {
+      var token = result.credential.accessToken;
+      var user = result.user;
+    }).catch(function(error) {
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      var email = error.email;
+      var credential = error.credential;
+    });
+});
 
 /* cerrar sesion */
-function logOut() {
+$('#logOut').on('click', function(event) {
   firebase.auth().signOut()
     .then(function() {
       window.location.href = '../views/sesion.html';
@@ -85,4 +120,4 @@ function logOut() {
     .catch(function(error) {
       console.log(error);
     });
-}
+});
