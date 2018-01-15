@@ -406,4 +406,26 @@ textarea:focus {
   padding: 1em;
 }
 
-/* Estilos vista Contactos */
+/* Estilos vista Preferences */
+.images-pref1, .images-pref2, .images-pref3 {
+  height: auto;
+  padding-top: 1em;
+}
+
+.images-pref1 {
+  padding-left: 1em; 
+  width: 10em;
+}
+
+.images-pref2 {
+  width: 10em;
+}
+
+.images-pref3 {
+  width: 15em;
+}
+
+.images-preferences {
+  border: 1px solid #eee;
+  margin-top: 1em; 
+}
