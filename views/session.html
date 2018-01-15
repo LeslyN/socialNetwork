@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- - - - - - - - - - - - - - - - CABEZA - - - - - - - - - - - - - - - - - - - -  -->
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,25 +11,32 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="shortcut icon" type="image/x-icon" href="../assets/images/favicon/apple-icon-76x76.png">
   <link rel="stylesheet" href="../css/main.css">
-  <title>Crear Cuenta</title>
+  <title>Inicia Sesion</title>
+  <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
 </head>
-<body class="vh100 bg-create">
+<!-- - - - - - - - - - - - - - - - CUERPO - - - - - - - - - - - - - - - - - - - -  -->
+<body class="vh100 bg-sesion">
+
   <div class="page-container">
-    <h1 class="title-form">Login</h1>
+    <!-- titulo -->
+    <h1 class="title-form">Inicia Sesión</h1>
+    <!-- id: email1, password1 y login -->
     <form class="user-form" action="" method="post">
-      <input class="login" name="username" class="username" placeholder="Username" type="text">
-      <input class="login" name="password" class="password" placeholder="Password" type="password">
-      <button class="btn-login" type="submit">Sign in</button>
+      <input id="email1" class="login" name="email"  placeholder="Email" type="email">
+      <input id="password1" class="login" name="password"  placeholder="Password" type="password">
+      <button id="login" class="btn-login" type="submit">Log in</button>
     </form>
-    <!--enlace que direcciona a la vista crear-->
-    <a class="create-link" href="../views/create.html">No account?, Create one here</a>
+    <!--enlace que direcciona a la vista create-->
+    <p>No account?,<a class="create-link" href="../views/create.html">Create one here</a></p>
+    <!-- conexion con facebook y google -->
     <div class="connect">
       <p>Or connect with:</p>
+      <!-- id: log-facebook y log-google -->
       <p>
-        <button onclick="facebook()" class="btn-social" type="button">
+        <button id="log-facebook" class="btn-social" type="button">
           <a class="facebook"></a>
         </button>
-        <button onclick="google()" class="btn-social" type="button">
+        <button id="log-google" class="btn-social" type="button">
           <a class="google"></a>
         </button>
       </p>
@@ -37,9 +45,8 @@
 
   <!--Enlaces js-->
   <script src="../vendors/js/jquery-3.2.1.min.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
   <script src="../vendors/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="../js/google.js"></script>
-  <script type="text/javascript" src="../js/facebook.js"></script>
+  <script type="text/javascript" src="../js/email.js"></script>
+
 </body>
 </html>
