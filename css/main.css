@@ -14,6 +14,12 @@ body {
 .vh100 {
   height: 100vh;
 }
+.black {
+	color: #000;
+}
+.white {
+	color: #fff;
+}
 
 /* Estilos de vista index */
 .bg-index {
@@ -46,8 +52,14 @@ body {
 }
 
 /* Estilos crear formulario */
-.bg-create {
+.bg-sesion {
   background-image: url("../assets/images/sesion.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.bg-create {
+	background-image: url("../assets/images/sesion-b.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
