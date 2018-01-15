@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   background: #f8f8f8;
   font-family: 'PT Sans', Helvetica, Arial, sans-serif;
@@ -161,11 +165,6 @@ body {
 }
 
 /* Estilos vista Profile */
-/* .bg-profile {
-  width: 1920px;
-  background: #e0e0e0;
-  margin: 0 auto;
-} */
 .menu {
   text-align: center;
 }
@@ -202,7 +201,7 @@ body {
 	background-color: #ffffff;
 	background-position:center;
 	background-color: #ffffff;
-	background-image: url("https://i.ytimg.com/vi/TN2fJ24pKXs/maxresdefault.jpg");
+	background-image: url("../assets/images/image-header.jpg");
 	background-size:cover;
 }
 
@@ -291,121 +290,125 @@ body {
 	color: #777;
 }
 
-/* Estilo para dispositivos móviles */
-@media screen and (max-width: 1000px) {
-	.bimenu{
-		display: block;
-	}
+/* Estilos Vista Profile */
+.divider-right{
+  border-right: 1px solid #5882FA;
 }
 
-@media screen and (max-width: 550px) {
-	
-   .header button:hover{
-		position:relative;
-		float: right;
-		width:50px;
-		height:50px;
-		margin-right:15px;
-		border-radius: 100%;
-		padding:0px 15px 0px 15px;
-		top: 130px;
-		right: 5px;
-		transition:0.2s;
-		-webkit-box-shadow:0 0 2px rgba(0,0,0,.12),0 2px 2px rgba(0,0,0,.2);
-		box-shadow:0 0 2px rgba(0,0,0,.12),0 2px 2px rgba(0,0,0,.2);
-	}
-
-	.header button:hover i{
-		display: inline-block;
-		float: right;
-		color: #333;
-		font-size:18px;
-	}
-	
-	.header button:hover .text{
-		display:none;
-		font-family: 'Quicksand', sans-serif;
-		font-size:15px;
-		font-weight: 600;
-		transition: 1s;
-	}
-	
-	.title-profile h1{
-		font-family: 'Cabin', sans-serif;
-		color:#444;
-		font-size:30px;
-		text-align:center;
-		margin-top:20px;
-	}
-
-	.title-profile p{
-		font-family: 'Quicksand', sans-serif;
-		font-size: 12px;
-		text-align: center;
-		text-transform: uppercase;
-		color: #777;
-	}
+.top{
+  margin-top: 5%;
+}
+.center{
+  margin: auto;
 }
 
-@media screen and (max-width: 450px) {
-	
-	.header{
-		position:relative;
-		width:100%;
-		height:120px;
-		border-bottom: 3px solid #fff;
-		background-color: #ffffff;
-		background-position:center;
-		background-color: #ffffff;
-		background-image: url("https://i.ytimg.com/vi/TN2fJ24pKXs/maxresdefault.jpg");
-		background-size:cover;
-	}
-	
-	.avatar{
-		z-index:1;
-		position: relative;
-		margin: auto;
-		margin-top: -50px;
-		width: 120px;
-		height: 120px;
-		border-radius: 100%;
-		border: 4px solid rgba(255, 255, 255, 1);
-		background: url("http://meredithcnn.images.worldnow.com/images/10389401_G.jpg");
-		background-size: cover;
-		background-position: center;
-	}
-
-	.title-profile h1{
-		font-family: 'Cabin', sans-serif;
-		color:#444;
-		font-size:25px;
-		text-align:center;
-		margin-top:20px;
-	}
-
-	.title-profile p{
-		font-family: 'Quicksand', sans-serif;
-		font-size: 12px;
-		text-align: center;
-		text-transform: uppercase;
-		color: #777;
-	}
-	
+.divider{
+  border-bottom: 1px solid #e2e2e2;
 }
 
-@media screen and (max-width: 350px) {
-	.avatar{
-		z-index:1;
-		position: relative;
-		margin: auto;
-		margin-top: -50px;
-		width: 90px;
-		height: 90px;
-		border-radius: 100%;
-		border: 4px solid rgba(255, 255, 255, 1);
-		background: url("http://meredithcnn.images.worldnow.com/images/10389401_G.jpg");
-		background-size: cover;
-		background-position: center;
-	}
-	
+textarea {
+  border-color: 2 px solid #eee;
+  border-radius: 20px;
+	font-size: 16px;
+	min-height: 80px;
+	outline: none;
+	resize: none;
+	width: 100%;
+	transition: border-color 0.4s;
+  overflow: hidden;
+  padding: 1em;
+  color: #000;
+  background-color: rgba(161, 161, 161, .4);
 }
+
+textarea:focus {
+	border-color: #5ca2e7;
+}
+
+/* ::-webkit-input-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder,
+:-moz-placeholder {
+	color: #fafafa;
+} */
+
+/* Posteo */
+.safe {
+  stroke: #1da1f2;
+}
+
+.warn {
+  stroke: #ffad1f;
+}
+
+.danger {
+  stroke: #e0245e;
+}
+
+.footer-form {
+	padding-top: 25px;
+} 
+
+.post-btn, .count {
+	font-weight: 700;
+}
+
+.post-btn {
+	background-color: #1da1f2;
+	border: 1px solid #35a9f1;
+	border-radius: 4px;
+	color: #ffffff;
+	font-size: 16px;
+	text-transform: uppercase;
+	padding: 10px 25px;
+	transition: background-color 0.2s, color 0.2s;
+}
+
+.post-btn:disabled {
+	border: 1px solid #999999;
+	background-color: #cccccc;
+	color: #666666;
+} 
+
+.count {
+	float: right;
+	font-size: 18px;
+  line-height: 40px;
+  color: #000;
+}
+
+.items, .photo-selector, .icon-btn, .media-selector {
+  display: inline-block;
+}
+
+.icon-btn {
+  /* border-color: #c3bfbf; */
+  border-radius: 15px;
+  background-color: transparent;
+}
+
+.cam {
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/icam.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  border-color: 1px solid #eee;
+}
+
+.new-message {
+  background-color: #fff;
+  width: inherit;
+  height: auto;
+  word-wrap: break-word;
+  border: 1px solid #e6ecf0;
+  padding: 15px;
+  margin: .6em auto;
+}
+
+.like {
+  text-decoration: none;
+  padding: 1em;
+}
+
+/* Estilos vista Contactos */
