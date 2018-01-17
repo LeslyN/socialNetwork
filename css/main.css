@@ -17,6 +17,7 @@ body {
 .black {
   color: #000;
 }
+
 .white {
   color: #fff;
 }
@@ -297,6 +298,7 @@ body {
 .top{
   margin-top: 5%;
 }
+
 .center{
   margin: auto;
 }
